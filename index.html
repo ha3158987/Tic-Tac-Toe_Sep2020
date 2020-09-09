@@ -1,22 +1,70 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Vanilla Coding | Bootcamp Prep</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
-  <link href="./styles/index.css" rel="stylesheet" />
-</head>
-<body>
-  <img class="main-logo" src="./images/vc.png" alt="Vanilla Coding Logo" />
-  <h1>Tick Tack Toe</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Vanilla Coding | Bootcamp Prep</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./styles/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <img class="main-logo" src="./images/vc.png" alt="Vanilla Coding Logo" />
+    <h1>TIC-TAC-TOE</h1>
 
-  <section>
-    <div class="board">
-      <!-- This is your board.. You can change if you want -->
-    </div>
-  </section>
+    <section>
+      <div class="board">
+        <!-- This is your board.. You can change if you want -->
+        <div class="greeting">
+          맘에 드는 캐릭터를 클릭하면 게임이 시작됩니다.
+        </div>
 
-  <script src="./app/index.js"></script>
-</body>
+        <div class="tic-tac-toe">
+          <div class="row">
+            <div class="cell">1</div>
+            <div class="cell">2</div>
+            <div class="cell">3</div>
+          </div>
+
+          <div class="row">
+            <div class="cell">4</div>
+            <div class="cell">5</div>
+            <div class="cell">6</div>
+          </div>
+
+          <div class="row">
+            <div class="cell">7</div>
+            <div class="cell">8</div>
+            <div class="cell">9</div>
+          </div>
+        </div>
+
+        <div class="character kitty"></div>
+        <div class="character puppy"></div>
+
+        <!-- <table id="tbl" border="1">
+        <tr>
+            <td>ONE</td>
+            <td>TWO</td>
+            <td>THREE</td>
+        </tr>
+        <tr>
+            <td>FOUR</td>
+            <td style="background-color:aqua">FIVE</td>
+            <td>SIX</td>
+        </tr>
+        <tr>
+            <td>SEVEN</td>
+            <td>EIGHT</td>
+            <td>NINE</td>
+        </tr>
+    </table> -->
+        <div class="game-over invisible"></div>
+      </div>
+    </section>
+
+    <script src="./app/index.js"></script>
+  </body>
 </html>
