@@ -14,7 +14,7 @@ body {
 h1 {
   color: #2574d0;
   font-size: 1.5em;
-  font-weight: 500;
+  font-weight: 300;
   text-align: center;
 }
 
@@ -27,8 +27,8 @@ h1 {
 .board {
   width: 900px;
   height: 600px;
-  border: 1px solid black;
-  background-color: #f9ca24;
+  border: 1px solid white;
+  background-color: #f7f1e3;
   margin: 0 auto;
 
   position: relative;
@@ -44,15 +44,15 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #a3cb38;
+  background-color: #9aecdb;
 
-  color: white;
+  color: black;
   font-size: 2.5em;
   font-weight: 200;
   opacity: 0.8;
   text-align: center;
 
-  /* z-index: 9; */
+  z-index: 9;
 }
 
 .greeting.invisible {
@@ -62,10 +62,10 @@ h1 {
 .tic-tac-toe {
   width: 300px;
   height: 300px;
-  background-color: #f9ca24;
+  background-color: #c7ecee;
+  border-radius: 4px;
 
   z-index: 1;
-  /* 가장 위 수면 위로 떠오름 */
 }
 
 .row {
@@ -78,7 +78,7 @@ h1 {
 .cell {
   width: 100px;
   height: 100px;
-  border: solid #ffffff 5px;
+  border: solid #58b19f 5px;
 
   display: flex;
   justify-content: center;
@@ -115,30 +115,36 @@ h1 {
 
 /* 셀이 비었을때 */
 .row > .cell.empty {
-  color: #f9ca24;
+  color: #c7ecee;
 }
 
 /* X의 턴일때, cell에 hover할 경우 */
 .X > .row > .cell.empty:hover {
-  color: #ffc048;
+  color: #b2bec3;
   cursor: pointer;
 }
 
 /* O의 턴일때, cell에 hover할 경우*/
 .O > .row > .cell.empty:hover {
-  color: #ffc048;
+  color: #b2bec3;
   cursor: pointer;
 }
 
 /* kitty(X)와 puppy(O)*/
+/* 안나 */
 .kitty {
   left: 0;
-  background-image: url(../images/kitty-x.png);
+  background-image: url(../images/Anna-X.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
+/* 엘사 */
 .puppy {
   right: 0;
-  background-image: url(../images/puppy-o.png);
+  background-image: url(../images/Elsa-O.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .character {
@@ -155,21 +161,21 @@ h1 {
 
 @keyframes smaller {
   from {
-    width: 15em;
+    width: 18em;
     height: 30em;
-    opacity: 0.8;
+    opacity: 0.9;
   }
   to {
     width: 8em;
     height: 16em;
-    opacity: 0.2;
+    opacity: 0.5;
   }
 }
 
 /* X의 턴 일때, 브레인 키우기 */
 /* O의 턴 일때, 핑키 키우기 */
-.X + .mouse,
-.O + .mouse + .mouse {
+.X + .character,
+.O + .character + .character {
   animation: bigger 0.7s forwards;
 }
 
@@ -177,12 +183,12 @@ h1 {
   from {
     width: 8em;
     height: 16em;
-    opacity: 0.2;
+    opacity: 0.5;
   }
   to {
-    width: 15em;
+    width: 18em;
     height: 30em;
-    opacity: 0.8;
+    opacity: 0.9;
   }
 }
 
@@ -190,18 +196,19 @@ h1 {
 .game-over {
   position: absolute;
   top: 37%;
-  background-color: indianred;
+  background-color: #22a6b3;
   width: 100%;
   height: 160px;
 
   text-align: center;
   font-size: 4em;
+  font-weight: 350;
   color: white;
 
   animation: pop 2s forwards;
 
   z-index: 99;
-  /* 왜 99씩이나? */
+  /* 왜 99씩이나? 더 큰 z-index 값을 가진 요소가 작은 값의 요소 위를 덮는다.*/
 }
 
 @keyframes pop {
@@ -215,13 +222,21 @@ h1 {
 
 .restart {
   font-size: 0.45em;
+  font-weight: 350;
   background-color: white;
   width: 25%;
-  color: indianred;
+  color: #22a6b3;
   margin: 0 auto;
   margin-top: 15px;
+  border-radius: 4px;
 
   cursor: pointer;
+}
+
+.restart:hover {
+  color: white;
+  background-color: #3c6382;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 18px 0 rgba(0, 0, 0, 0.19);
 }
 
 .game-over.invisible {
