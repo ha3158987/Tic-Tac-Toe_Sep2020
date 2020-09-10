@@ -132,7 +132,7 @@ h1 {
 
 /* kitty(X)와 puppy(O)*/
 /* 안나 */
-.kitty {
+.anna {
   left: 0;
   background-image: url(../images/Anna-X.png);
   background-repeat: no-repeat;
@@ -140,7 +140,7 @@ h1 {
 }
 
 /* 엘사 */
-.puppy {
+.elsa {
   right: 0;
   background-image: url(../images/Elsa-O.png);
   background-repeat: no-repeat;
@@ -208,7 +208,7 @@ h1 {
   animation: pop 2s forwards;
 
   z-index: 99;
-  /* 왜 99씩이나? 더 큰 z-index 값을 가진 요소가 작은 값의 요소 위를 덮는다.*/
+  /* 더 큰 z-index 값을 가진 요소가 작은 값의 요소 위를 덮는다.*/
 }
 
 @keyframes pop {

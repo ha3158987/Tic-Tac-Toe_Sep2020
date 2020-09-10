@@ -32,12 +32,12 @@ function selectCharacter() {
 }
 
 function clickCharacter(event) {
-  let pick = event.target.classList[1]; //puppy or kitty
+  let pick = event.target.classList[1]; //anna or elsa
 
-  if (pick === "kitty") {
+  if (pick === "anna") {
     tBox.classList.remove(O_turn);
     currentPlayer = X_turn;
-  } else {
+  } else if (pick === "elsa") {
     tBox.classList.remove(X_turn);
     currentPlayer = O_turn;
   }
@@ -102,18 +102,17 @@ function changeTurn() {
 
   tBox.classList.toggle(X_turn);
   tBox.classList.toggle(O_turn);
-  //이건 뭘 위한 toggle???
 
   paintAllEmptyCell();
 }
 
-//승자를 가리는 로직 - 100% 이해필요
+//승자를 가리는 로직
 function judge(player) {
-  let count = [0, 0, 0, 0]; //왜 배열에 담았나?
+  let count = [0, 0, 0, 0];
   let notEmpty = 0;
 
   for (var i = 0; i < 3; i++) {
-    count[0] = count[1] = 0; //왜?
+    count[0] = count[1] = 0;
     for (var j = 0; j < 3; j++) {
       if (tCell[i][j].classList.contains(player)) count[0]++;
       if (tCell[j][i].classList.contains(player)) count[1]++;
@@ -135,6 +134,7 @@ function gameOverMsg(str) {
   gameover.classList.remove("invisible");
 
   let msg = document.createElement("div");
+
   if (str === "Draw") {
     msg.textContent = "무승부입니다! 🕊️";
   } else {
@@ -148,12 +148,8 @@ function gameOverMsg(str) {
   gameover.append(btn);
 
   btn.addEventListener("click", function () {
-    window.location.reload(); //이런 게 있다고??
+    window.location.reload();
   });
 
   allCell.forEach((cell) => cell.removeEventListener("click", processClick));
 }
-// You can delete this code..
-// setTimeout(function () {
-//   alert('Getting Started? Look for app/index.js..');
-// }, 500);
