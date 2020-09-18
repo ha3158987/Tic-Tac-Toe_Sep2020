@@ -130,8 +130,7 @@ h1 {
   cursor: pointer;
 }
 
-/* kitty(X)와 puppy(O)*/
-/* 안나 */
+/* 안나 (Player X)*/
 .anna {
   left: 0;
   background-image: url(../images/Anna-X.png);
@@ -139,7 +138,7 @@ h1 {
   background-position: center;
 }
 
-/* 엘사 */
+/* 엘사 (Player O)*/
 .elsa {
   right: 0;
   background-image: url(../images/Elsa-O.png);
@@ -153,10 +152,8 @@ h1 {
   background-size: 100%;
 
   animation: smaller 1s forwards;
-  /* 애니메이션 발생 후 1초 뒤 작아짐 */
 
   z-index: 10;
-  /* 앞으로 떠오를 우선순위. 1이 제일 앞에서 보여짐 */
 }
 
 @keyframes smaller {
@@ -172,8 +169,8 @@ h1 {
   }
 }
 
-/* X의 턴 일때, 브레인 키우기 */
-/* O의 턴 일때, 핑키 키우기 */
+/* X의 턴 일때, 안나 키우기 */
+/* O의 턴 일때, 엘사 키우기 */
 .X + .character,
 .O + .character + .character {
   animation: bigger 0.7s forwards;
