@@ -21,14 +21,14 @@ h1 {
 .main-logo {
   display: block;
   margin: 2em auto 0;
-  height: 100px;
+  height: 60px;
 }
 
 .board {
   width: 900px;
   height: 600px;
   border: 1px solid white;
-  background-color: #f7f1e3;
+  background-color: #c7ecee;
   margin: 0 auto;
 
   position: relative;
@@ -48,7 +48,7 @@ h1 {
 
   color: black;
   font-size: 2.5em;
-  font-weight: 200;
+  font-weight: 250;
   opacity: 0.8;
   text-align: center;
 
@@ -127,6 +127,10 @@ h1 {
 /* O의 턴일때, cell에 hover할 경우*/
 .O > .row > .cell.empty:hover {
   color: #b2bec3;
+  cursor: pointer;
+}
+
+.character:hover {
   cursor: pointer;
 }
 

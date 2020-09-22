@@ -131,7 +131,7 @@ function judge(player) {
 
       if (!isEmpty(tCell[i][j])) notEmpty++;
 
-      // count가 3이상의 숫자가 나올 때 승자리턴
+      // count가 3이상인 숫자가 나올 때 승자리턴
       if (count.indexOf(3) >= 0) return player;
       // 9칸이 모두 채워졌을 때 무승부리턴
       if (notEmpty === 9) return "Draw";
